@@ -18,7 +18,7 @@ const getUsers = async(req, res) => {
     const response = {
         status: 'Success',
         data: {
-            user:[data]
+            users:[data]
         }
     }
     res.json(response)
@@ -51,8 +51,16 @@ const updateUser = async(req, res) => {
     res.json(response)
 }
 
-const deleteUser = (req, res) => {
-    res.send('Delete user')
+const deleteUser = async(req, res) => {
+    const id = req.params.id
+    const data = await usersModel.remove({_id: id})
+    const response = {
+        status:'success',
+        data:{ 
+            users: []
+        }        
+    }
+    res.json(response)
 }
 
 module.exports = {
