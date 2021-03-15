@@ -53,7 +53,7 @@ const updateUser = async(req, res) => {
 
 const deleteUser = async(req, res) => {
     const id = req.params.id
-    const data = await usersModel.remove({_id: id})
+    await usersModel.remove({_id: id})
     const response = {
         status:'success',
         data:{ 
