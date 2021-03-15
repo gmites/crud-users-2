@@ -10,12 +10,13 @@ mongoose.connect('mongodb://localhost/crud-users-d2')
 .catch((error)=>{
     console.log("Error")
 })
- 
+
 //Settings
 const app = express()
 app.set('port', 3500)
 
 //Middleware
+app.use(express.json())
 app.use(cors())
 
 //Routes

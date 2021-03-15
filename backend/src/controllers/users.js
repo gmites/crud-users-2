@@ -1,5 +1,16 @@
-const createUser = (req, res) => {
-    res.send('Create')
+
+const {usersModel} = require('../models')
+
+const createUser = async(req, res) => {
+    const newUser = new usersModel(req.body)
+    const data = await newUser.save()
+    const response = {
+        status: 'Success',
+        data: {
+            user:[data]
+        }
+    }
+    res.json(response)
 }
 
 const getUsers = (req, res) => {
