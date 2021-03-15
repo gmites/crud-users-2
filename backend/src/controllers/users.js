@@ -24,8 +24,15 @@ const getUsers = async(req, res) => {
     res.json(response)
 }
 
-const getUser = (req, res) => {
-    res.send('Get user')
+const getUser = async(req, res) => {
+    const data = await usersModel.findById(req.params.id)
+    const response = {
+        status: 'Success',
+        data: {
+            user:[data]
+        }
+    }
+    res.json(response)
 }
 
 const updateUser = (req, res) => {
