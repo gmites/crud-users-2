@@ -35,8 +35,20 @@ const getUser = async(req, res) => {
     res.json(response)
 }
 
-const updateUser = (req, res) => {
-    res.send('Update user')
+const updateUser = async(req, res) => {
+    const user = await usersModel.findById(req.params.id)
+    user.name = req.body.name
+    user.age = req.body.age
+    user.description = req.body.description
+    const data = await user.save()
+
+    const response = {
+        status: 'Success',
+        data: {
+            user:[data]
+        }
+    }
+    res.json(response)
 }
 
 const deleteUser = (req, res) => {
