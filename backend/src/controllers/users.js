@@ -13,8 +13,15 @@ const createUser = async(req, res) => {
     res.json(response)
 }
 
-const getUsers = (req, res) => {
-    res.send('Get all')
+const getUsers = async(req, res) => {
+    const data = await usersModel.find()
+    const response = {
+        status: 'Success',
+        data: {
+            user:[data]
+        }
+    }
+    res.json(response)
 }
 
 const getUser = (req, res) => {
