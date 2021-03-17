@@ -17,9 +17,7 @@ const getUsers = async(req, res) => {
     const data = await usersModel.find()
     const response = {
         status: 'Success',
-        data: {
-            users:[data]
-        }
+        data: data
     }
     res.json(response)
 }

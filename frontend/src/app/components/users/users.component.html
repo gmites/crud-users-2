@@ -1,1 +1,18 @@
-<p>users works!</p>
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+        <th scope="col">Description</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <th>{{ user.name }}</th>
+        <td>{{ user.age }}</td>
+        <td>{{ user.description }}</td>
+        <td><i class="far fa-edit my-fa-style mr-2 edit-color"></i><i class="far fa-trash-alt my-fa-style trash-color"></i></td>
+      </tr>
+    </tbody>
+  </table>
