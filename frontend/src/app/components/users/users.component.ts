@@ -22,9 +22,12 @@ export class UsersComponent implements OnInit {
   retrieveUsers(): void {
     this.usersService.getAllUsers()
       .subscribe(
-        (x) => {
-         this.users = x.data;
-          console.log('xdata', x.data);
+        (response) => {
+          if(response.status === 'Success'){
+            this.users = response.data;
+          }else{
+            console.log("Error!");
+          }
         },
         error => {
           console.log(error);
