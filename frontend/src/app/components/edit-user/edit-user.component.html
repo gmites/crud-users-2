@@ -1,1 +1,15 @@
-<p>edit-user works!</p>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3 class="mt-3">User Details</h3>
+            <form>
+                <input type="text" class="form-control" id="name" placeholder="Name" name="name" [(ngModel)]="currentUser!.name"/> 
+                <input type="text" class="form-control mt-2" id="age" placeholder="Age"  [(ngModel)]="currentUser!.age" name="age"/>
+                <input type="text" class="form-control mt-2" id="description" placeholder="Description" [(ngModel)]="currentUser!.description" name="description"/>
+                <button type="submit" class="btn btn-success mt-3" (click)="updateUser()">Update</button>
+            </form>
+        </div>    
+    </div>
+</div>
+
