@@ -11,7 +11,6 @@ const baseUrl='http://127.0.0.1:3500/';
 })
 export class UsersService {
     
-
   constructor(private http:HttpClient) {
   }
   
@@ -31,5 +30,8 @@ export class UsersService {
     return this.http.put(`${baseUrl}user/${id}`, data);
   }
 
+  deleteUser(id: any): Observable<any> {
+    return this.http.delete(`${baseUrl}user/${id}`);
+  }
   
 }

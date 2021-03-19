@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UsersService } from '../../../services/users.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { User } from '../../../models/users.model';
-import { UserResponse } from '../../../models/responseUser.model';
 
 @Component({
   selector: 'app-edit-user',
@@ -17,11 +16,11 @@ export class EditUserComponent implements OnInit {
     description: ''
   };
 
-  id?:string;
+  id:string = '';
 
   constructor(private usersService: UsersService,
-     private route: ActivatedRoute,
-      private router: Router
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -48,7 +47,7 @@ export class EditUserComponent implements OnInit {
       .subscribe(
         response => {
           if(response.status === 'Success'){
-            console.log("Updated!");
+            this.router.navigate(['/']);
           }else{
             console.log("Error!");
           }

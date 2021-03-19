@@ -1,9 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h3 class="mt-3">User Details</h3>
+            <form>
+                <input type="text" class="form-control" placeholder="Name"  [(ngModel)]="user.name" name="name"/> 
+                <input type="text" class="form-control mt-2" placeholder="Age"  [(ngModel)]="user.age" name="age"/>
+                <input type="text" class="form-control mt-2" placeholder="Description" [(ngModel)]="user.description" name="description"/>
+                <button class="btn btn-success mt-3" (click)="createUser()">Create <i class="fas fa-plus-circle"></i></button> 
+            </form>
+        </div>    
+    </div>
+</div>
 
-<h3>User Details</h3>
-<form>
-    <input type="text" class="form-control" id="name" placeholder="Name"  [(ngModel)]="user.name" name="name"/> 
-    <input type="text" class="form-control mt-2" id="age" placeholder="Age"  [(ngModel)]="user.age" name="age"/>
-    <input type="text" class="form-control mt-2" id="description" placeholder="Description" [(ngModel)]="user.description" name="description"/>
-    <button type="submit" class="btn btn-success mt-3" (click)="createUser()">Create <i class="fas fa-plus-circle"></i></button>
-</form>
+
     

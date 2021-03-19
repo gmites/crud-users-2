@@ -8,8 +8,7 @@ import { AppComponent } from './app.component';
 import { UsersComponent } from './components/users/users.component';
 import { EditUserComponent } from './components/edit-user/edit-user.component';
 import { CreateUserComponent } from './components/create-user/create-user.component';
-import { HeaderComponent } from './header/header.component';
-import { CrudBoardComponent } from './components/crud-board/crud-board.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +16,7 @@ import { CrudBoardComponent } from './components/crud-board/crud-board.component
     UsersComponent,
     EditUserComponent,
     CreateUserComponent,
-    HeaderComponent,
-    CrudBoardComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
