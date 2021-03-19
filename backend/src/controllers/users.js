@@ -51,7 +51,7 @@ const deleteUser = async(req, res) => {
     const id = req.params.id
     await usersModel.remove({_id: id})
     const response = {
-        status:'success',
+        status:'Success',
         data:{ 
             users: []
         }        

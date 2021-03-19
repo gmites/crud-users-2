@@ -39,9 +39,8 @@ export class UsersComponent implements OnInit {
     this.usersService.deleteUser(id)
       .subscribe(
         response => {
-          console.log(response);
           if(response.status === 'Success'){
-            this.router.navigate(['/']);
+            this.retrieveUsers()
           }else{
             console.log("Error!");
           }
