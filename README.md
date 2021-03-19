@@ -1,4 +1,4 @@
-# Deber 2 Backend CICE: Desarrollar una API con NodeJS y Express.
+# Deber 2 Backend CICE: Desarrollar una API con NodeJS y Express - Backend y Frontend con algún framework de JS.
 
 ## Objetivo
 
